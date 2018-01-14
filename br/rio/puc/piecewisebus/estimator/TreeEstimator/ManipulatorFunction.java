@@ -8,7 +8,7 @@ import java.util.List;
 import br.rio.puc.piecewisebus.dao.DAO;
 import br.rio.puc.piecewisebus.function.PiecewiseException;
 import br.rio.puc.piecewisebus.function.UpdateStreamFunction;
-import br.rio.puc.binarytree.model.*;
+import br.rio.puc.piecewisebus.model.ArvoreBinaria;
 import br.rio.puc.piecewisebus.model.Elements;
 import br.rio.puc.piecewisebus.model.ElementsTimestamp;
 
