@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import br.rio.puc.piecewisebus.dao.DAO;
 import br.rio.puc.piecewisebus.function.PiecewiseException;
 
+import br.rio.puc.piecewisebus.estimator.*;
+
 public class BinaryTree {
     private Node root;
     DAO dao = new DAO();
