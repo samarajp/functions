@@ -2,19 +2,15 @@ package br.rio.puc.piecewisebus.estimator;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 import br.rio.puc.piecewisebus.dao.DAO;
 import br.rio.puc.piecewisebus.function.PiecewiseException;
-import br.rio.puc.piecewisebus.function.UpdateStreamFunction;
 import br.rio.puc.binarytree.model.*;
-import br.rio.puc.piecewisebus.model.Elements;
 import br.rio.puc.piecewisebus.model.ElementsTimestamp;
 
 public class ManipulatorFunction {
 	
-	     public void build_treeEstimator(double timestamp, int id_edge, double tolerance, double gama_value) 
+	     public void build_treeEstimator(double timestamp, int id_edge, double gama_value) 
 	    		 throws NumberFormatException, ClassNotFoundException, PiecewiseException, SQLException, IOException {
 
 	    	 DAO dao = new DAO();
@@ -50,7 +46,9 @@ public class ManipulatorFunction {
              e.setArray(arrayesq);
 	    	 double desvio_padrao_esq = e.getDesvioPadrao();
 	    	 double antigamedia_esq = e.getMedia();
-        	 
+	    	 
+	    	 double tolerance = 0.5  * e.getDesvioPadrao() + (1-0.5) * e.getNewDesvioPadrao(e.getMedia(), new_middletime, e.getDesvioPadrao()); 
+	    	 
              while(desvio_padrao_esq > tolerance){
             	 
                  tree.setMiddleTime(new_middletime);

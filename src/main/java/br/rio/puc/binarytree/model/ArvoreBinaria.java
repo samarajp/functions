@@ -1,5 +1,6 @@
 package br.rio.puc.binarytree.model;
 
+import br.rio.puc.graph.model.No;
 import br.rio.puc.piecewisebus.estimator.TreeEstimator;
 
 public class ArvoreBinaria {

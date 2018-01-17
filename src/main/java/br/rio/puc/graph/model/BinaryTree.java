@@ -1,4 +1,4 @@
-package br.rio.puc.piecewisebus.estimator;
+package br.rio.puc.graph.model;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -19,7 +19,7 @@ public class BinaryTree {
     
     public void imprimirArvore(){
         if(this.root == null)
-            System.out.println("√Årvore vazia");
+            System.out.println("√?rvore vazia");
         else
             imprimirArvore(this.root);
     }
